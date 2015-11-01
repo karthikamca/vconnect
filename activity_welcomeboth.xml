@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.karthika.connect.welcomeboth">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/backlayout"
+        android:layout_below="@+id/tool_bar"
+        android:baselineAligned="false"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:id="@+id/vlayout"
+            android:layout_weight="0.5">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/ready_to_help"
+                android:textSize="32sp"
+                android:id="@+id/volunteer"
+                android:layout_gravity="center_vertical"
+                android:shadowColor="#4dc9ff"
+                android:textColor="#ffffff"
+                android:background="#ba3f38"
+                android:textStyle="bold"
+                android:onClick="both"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:id="@+id/slayout"
+        android:layout_weight="0.5">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/need_help"
+                android:textSize="32sp"
+                android:id="@+id/seeker"
+                android:layout_gravity="center_vertical"
+                android:onClick="both"
+                android:shadowColor="#4dc9ff"
+                android:textColor="#ffffff"
+                android:background="#ba3f38"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+</LinearLayout>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

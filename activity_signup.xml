@@ -1,0 +1,301 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"  tools:context=".signup"
+    android:id="@+id/signup1"
+    android:weightSum="1">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tool_bar"
+        android:id="@+id/scrollView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout">
+
+            <RadioGroup
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:id="@+id/type"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seeking_aid"
+                    android:id="@+id/rseek"
+                    android:checked="false"
+                    android:textSize="23sp"
+                    android:onClick="visib"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/offering_aid"
+                    android:id="@+id/roffer"
+                    android:checked="false"
+                    android:textSize="23sp"
+                    android:onClick="visib"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/both"
+                    android:id="@+id/rboth"
+                    android:checked="false"
+                    android:textSize="23sp"
+                    android:onClick="visib"/>
+            </RadioGroup>
+
+            <EditText
+                android:layout_marginTop="20dp"
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:id="@+id/uname"
+                android:layout_below="@id/type"
+                android:hint="@string/full_name"
+                android:layout_height="40dp"
+                android:textSize="26sp"
+                android:background="#c65b5d"
+                />
+
+            <EditText
+                android:layout_marginTop="15dp"
+                android:inputType="textPassword"
+                android:layout_below="@id/uname"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/pwd"
+                android:hint="@string/pwd1"
+                android:textSize="26sp"
+                android:background="#c65b5d" />
+
+            <EditText
+                android:layout_marginTop="15dp"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/cpwd"
+                android:layout_below="@id/pwd"
+                android:hint="@string/cpwd1"
+                android:textSize="26sp"
+                android:background="#c65b5d" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:height="40dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="26sp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/cpwd"
+                android:text="@string/gender"
+                android:id="@+id/gender"
+                android:textColor="#080808" />
+            <RadioGroup
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:id="@+id/rgender"
+                android:text="@string/gender"
+                android:layout_below="@+id/gender"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/male"
+                    android:textSize="26sp"
+                    android:id="@+id/rmale"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female"
+                    android:textSize="26sp"
+                    android:id="@+id/rfemale"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/transgender"
+                    android:textSize="26sp"
+                    android:id="@+id/rtransgender"
+                    android:checked="false" />
+
+            </RadioGroup>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="date"
+                android:textSize="26sp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/rgender"
+                android:id="@+id/dob"
+                android:background="#c65b5d"
+                android:hint="@string/dob" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:height="40dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="26sp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/dob"
+                android:text="@string/eq"
+                android:id="@+id/eq"
+                android:textColor="#080808" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eq"
+                android:layout_marginTop="10dp"
+                android:id="@+id/eqspin"
+                android:dropDownWidth="match_parent" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="26sp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/eqspin"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/phone"
+                android:background="#c65b5d"
+                android:hint="@string/phone_number" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="26sp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/phone"
+                android:inputType="textEmailAddress"
+                android:id="@+id/mail"
+                android:hint="@string/email_id"
+                android:background="#c65b5d" />
+
+            <!--<ImageView-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="70dp"-->
+                <!--android:layout_marginLeft="30dp"-->
+                <!--android:paddingTop="2dp"-->
+                <!--android:src="@drawable/ic_profile"-->
+                <!--android:background="#e86264"-->
+                <!--android:layout_marginStart="40dp"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:id="@+id/profilepic"-->
+                <!--android:contentDescription="@string/profile_picture"-->
+                <!--android:onClick="uploadphoto"/>-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:inputType="textPostalAddress"
+                android:id="@+id/address"
+                android:background="#c65b5d"
+                android:hint="@string/address"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/mail"
+                android:textSize="26sp" />
+            <EditText
+                android:layout_marginTop="20dp"
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:id="@+id/city"
+                android:layout_below="@id/address"
+                android:hint="@string/city"
+                android:layout_height="40dp"
+                android:textSize="26sp"
+                android:background="#c65b5d" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/layoffer"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/city"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="26sp"
+                    android:text="@string/offer"
+                    android:id="@+id/offer"
+                    android:textColor="#080808" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/donate_blood"
+                    android:textSize="26sp"
+                    android:id="@+id/cblood"
+                    android:layout_marginLeft="145dp"
+                    android:onClick="bgroup"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scribe"
+                    android:textSize="26sp"
+                    android:id="@+id/cwrite"
+                    android:layout_marginLeft="145dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nursing"
+                    android:textSize="26sp"
+                    android:id="@+id/cnursing"
+                    android:layout_marginLeft="145dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bgl"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/layoffer"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:height="40dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="26sp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/bloodgroup"
+                    android:id="@+id/bg"
+                    android:textColor="#080808" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner"
+                    android:layout_marginTop="10dp"
+                    android:dropDownWidth="match_parent"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

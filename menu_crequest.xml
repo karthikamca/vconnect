@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.karthika.connect.crequest">
+    <item android:id="@+id/action_done" android:icon="@drawable/ic_ok"
+        android:title="@string/ok"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/action_logout" android:title="@string/menu_logout"
+        android:icon="@drawable/ic_logout"
+        android:orderInCategory="100" app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.karthika.connect.signup">
+    <item android:id="@+id/action_exit" android:title="@string/action_exit"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_done" android:title="@string/action_done"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/action_login" android:title="@string/cancel"
+        app:showAsAction="ifRoom"
+        android:foreground="#c65b5d"/>
+</menu>

@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"  tools:context=".MainActivity"
+    android:id="@+id/page1"
+    android:weightSum="1">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tool_bar"
+        android:id="@+id/scrollView2" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/srl">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/connect"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/uid"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/uid"
+                    android:ems="10"
+                    android:layout_gravity="center_horizontal" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/pwd"
+                    android:hint="@string/pwd" />
+
+                <Button
+                    style="@style/Base.Theme.AppCompat.Light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:ems="10"
+                    android:text="@string/login"
+                    android:id="@+id/login"
+                    android:textStyle="italic"
+                    android:onClick="loginm" />
+
+                <TextView
+                    android:layout_width="101dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:ems="10"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/register"
+                    android:id="@+id/register"
+                    android:linksClickable="true"
+                    android:textSize="26sp"
+                    android:textColorLink="#5782ff"
+                    android:textStyle="italic"
+                    android:onClick="register" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
